@@ -1,0 +1,30 @@
+{
+  "name": "sequelize-pizza-express-routes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "model.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "db:init": "dropdb --if-exists -e pizza_express_hw && createdb -e pizza_express_hw",
+    "db:reset": "echo 'What is a resetDb.js?'",
+    "db:seed": "echo 'What is a seed.js?'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/sei-nyc-jeopardy/sequelize-pizza-express-routes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "pg": "^7.10.0",
+    "sequelize": "^5.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
