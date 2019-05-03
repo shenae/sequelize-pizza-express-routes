@@ -1,11 +1,10 @@
+// What's missing?
+
 // Declare and require dependencies for server.js
-const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 
-const PORT = process.env.PORT || 3000;
-const app = express();
-
+// How about over here?
 
 // Use middleware
 app.use(logger('dev'));
