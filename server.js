@@ -19,7 +19,7 @@ app.get('/', (request, response) => response.send(`<h1 style="text-align: center
 // Add your routes for get (all, one), and post
 
 
-// Finally, what's your server listening?
+// Finally, what's your server listening for?
 
 
 module.exports = app;
