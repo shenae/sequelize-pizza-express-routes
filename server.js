@@ -13,13 +13,13 @@ app.use(bodyParser.json());
 
 
 // Test server response
-app.get('/', (req, res) => res.send(`<h1 style="text-align: center;">♪ Express yo self ♪</h1>`));
+app.get('/', (request, response) => response.send(`<h1 style="text-align: center;">♪ Express yo self ♪</h1>`));
 
 
 // Add your routes for get (all, one), and post
 
 
 // Finally, what's your server listening?
-app.listen(PORT, () => console.log(`Listening`));
+
 
 module.exports = app;
