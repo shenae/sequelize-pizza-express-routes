@@ -12,16 +12,34 @@ const { Pizza } = require('./model.js')
 app.use(logger('dev'));
 app.use(bodyParser.json());
 
-
 // Test server response
 app.get('/', (request, response) => response.send(`<h1 style="text-align: center;">♪ Express yo self ♪</h1>`));
 
 
 // Add your routes for get (all, one), and post
-app.get('/pizzas', async (request, response) => {
+app.get('/allpizzas', async (request, response) => {
     try {
-        const allPizzas = Pizza.findAll();
-        response.json(allPizzas);
+        const allPizzas = await Pizza.findAll();
+        response.send(allPizzas);
+    } catch(error) {
+        console.log(`Hold up, error: ${error}`);
+    } 
+});
+
+app.get('/pizzas/:id', async (request, response) => {
+    try {
+        const pizzaById = await Pizza.findByPk
+        (request.params.id);
+        response.json(pizzaById);
+    } catch(error) {
+        console.log(`Hold up, error: ${error}`);
+    } 
+});
+
+app.post('/makeapizza', async (request, response) => {
+    try{
+     const makePizza = await Pizza.create(request.body);
+     response.json(request.body);  
     } catch(error) {
         console.log(`Hold up, error: ${error}`);
     } 

@@ -13,7 +13,7 @@ const db = new Sequelize({
 
 // Define your pizza table with three attributes as type string: 
 // flavor, description, location
-const Pizza = db.define('pizza', {
+const Pizza = db.define('data', {
     flavor: Sequelize.STRING,
     description: Sequelize.STRING,
     location: Sequelize.STRING

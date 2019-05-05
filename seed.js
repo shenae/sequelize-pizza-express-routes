@@ -1,11 +1,11 @@
 // What do you need to require from your model.js?
 const { Pizza } = require('./model.js')
-const data = require('./data');
+const data = require('./data.js');
 
 const insertSeeds = async () => {
   try {
     // declare a const that uses your table object from model.js to .bulkCreate()
-    const data = await Pizza.bulkCreate(Pizza);
+    const pizzaData = await Pizza.bulkCreate(data);
 
     console.log(`Insert compeleted: ${data.length} pizzas were created.`);
   } catch (err) { 
