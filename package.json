@@ -1,14 +1,15 @@
 {
   "name": "sequelize-pizza-express-routes",
   "version": "1.0.0",
-  "description": "",
+  "description": "Your instructors has decided to open a pizza restaurant named: Pizza Express!! However, the developer they hired to build the site left it unfinished. Right now it has the beginning of a server, but there's no database attached yet. Oh no!",
   "main": "model.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "db:init": "dropdb --if-exists -e pizza_express_hw && createdb -e pizza_express_hw",
-    "db:reset": "echo 'What is a resetDb.js?'",
-    "db:seed": "echo 'What is a seed.js?'"
+    "db:reset": "node ./resetDb.js",
+    "db:seed": "node ./seed.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,7 @@
     "express": "^4.16.4",
     "morgan": "^1.9.1",
     "pg": "^7.10.0",
-    "sequelize": "^5.8.3"
+    "sequelize": "^5.8.4"
   },
   "devDependencies": {
     "nodemon": "^1.19.0"
